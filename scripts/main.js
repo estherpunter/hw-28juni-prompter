@@ -88,19 +88,19 @@ const departments = {
 
 //Opdracht 2a.
 
-const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+const chosenDepartment = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
 
 let output = ''
 
-if (userInput === 'marketing') {
+if (chosenDepartment === 'marketing') {
     output = 'marketing';
     console.log(['marketing'] + ' is een leuke afdeling om te werken. Er werken op dit moment ' + departments.marketing.numberOfEmployees + ' medewerkers.');
         // console.log('Je koos Marketing. ' + departments.marketing.description);
-} else if (userInput === 'sales') {
+} else if (chosenDepartment === 'sales') {
     output = 'sales'
     console.log(['sales'] + ' is een leuke afdeling om te werken. Er werken op dit moment ' + departments.sales.numberOfEmployees + ' medewerkers.');
     // console.log('Je koos Sales. ' + departments.sales.description);
-} else if (userInput === 'customer-service') {
+} else if (chosenDepartment === 'customer-service') {
     output = 'customer service'
     console.log(['customer-service'] + ' is een leuke afdeling om te werken. Er werken op dit moment ' + departments['customer-service'].numberOfEmployees + ' medewerkers.');
     // console.log('Je koos Customer Service. ' + departments['customer-service'].description);
@@ -111,30 +111,30 @@ if (userInput === 'marketing') {
 // Opdracht 3.
 
 //
-// const userChoice = prompt('Je koos ' + output + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.' +
+// const chosenFunction = prompt('Je koos ' + output + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.' +
 //     ' 0: ' + departments.marketing.jobs[0].title +
 //     ' 1: ' + departments.marketing.jobs[1].title +
 //     ' 2: ' + departments.marketing.jobs[2].title +
 //     ' 3: ' + departments.marketing.jobs[3].title);
 
-let userChoice = ''
+let chosenFunction = ''
 
 if (output === 'marketing') {
-    userChoice = '0' || '1' || '2' || '3';
+    chosenFunction = '0' || '1' || '2' || '3';
     console.log(prompt('Je koos ' + output + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.' +
         ' 0: ' + departments.marketing.jobs[0].title +
         ' 1: ' + departments.marketing.jobs[1].title +
         ' 2: ' + departments.marketing.jobs[2].title +
         ' 3: ' + departments.marketing.jobs[3].title));
 } else if (output === 'sales') {
-    userChoice = '0' || '1' || '2' || '3';
+    chosenFunction = '0' || '1' || '2' || '3';
     console.log(prompt('Je koos ' + output + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.' +
         ' 0: ' + departments.sales.jobs[0].title +
         ' 1: ' + departments.sales.jobs[1].title +
         ' 2: ' + departments.sales.jobs[2].title +
         ' 3: ' + departments.sales.jobs[3].title));
 } else if (output === 'customer service') {
-    userChoice = '0' || '1' || '2' || '3';
+    chosenFunction = '0' || '1' || '2' || '3';
     console.log(prompt('Je koos ' + output + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.' +
         ' 0: ' + departments['customer-service'].jobs[0].title +
         ' 1: ' + departments['customer-service'].jobs[1].title +
@@ -142,7 +142,7 @@ if (output === 'marketing') {
         ' 3: ' + departments['customer-service'].jobs[3].title));
 }
 
-switch (userChoice) {
+switch (chosenFunction) {
     case '0':
         console.log('Je koos ' + departments.marketing.jobs[0].title + '. Een uitdagende rol! ' + departments.marketing.jobs[0].description);
         break;
